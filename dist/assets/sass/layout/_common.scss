@@ -1,0 +1,56 @@
+@use "../base/setting";
+@use "../base/mediaquery";
+
+@charset "utf-8";
+
+/*----------------------------------------
+	共通部分
+----------------------------------------*/
+body {
+	font-size: setting.$bodyFont;
+	line-height: setting.$lineHeight;
+    color: setting.$textColor;
+}
+
+@include mediaquery.sp {
+	
+}
+
+
+@function calcResp($n) {
+	@return calc($n * 100vw / 375);
+}
+@function calcPc($n) {
+	@return min(calc($n * 100vw / 1366), $n);
+}
+
+.dev-sitemap{
+	max-width: 64rem;
+	padding: 8rem 2rem;
+	margin: 0 auto;
+	h1{
+		text-align: center;
+		font-weight: bold;
+		color: #000;
+		font-size: 2.4rem;
+		margin: 0 0 4rem;
+	}
+	table{
+		width: 100%;
+	}
+	th,
+	td{
+		font-size: 1.6rem;
+		padding: 1rem;
+	}
+	th{
+		width: 35%;
+	}
+	td{
+		width: 65%;
+	}
+	a{
+		text-decoration: underline;
+		color: rgb(177, 15, 231);
+	}
+}

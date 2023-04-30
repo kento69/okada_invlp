@@ -1,0 +1,17 @@
+$setWidth: 768px;
+
+@mixin pc {
+  @media (min-width: ($setWidth)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($setWidth)) {
+    @content;
+  }
+}
+
+// 普通に書く場合はこんな感じ
+// @media max-width: 1024px) {
+//   
+// }

@@ -1,0 +1,115 @@
+@use "fonts";
+@use "setting";
+
+/*----------------------------------------
+	reset
+----------------------------------------*/
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include fonts.base-font;
+  font-size: setting.$baseFont;
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, /*table, caption, tbody, tfoot, thead, tr, th,*/
+article, aside, dialog, figure, footer, header, hgroup, main, menu, nav, section,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  color: setting.$textColor;
+  @include fonts.base-font;
+}
+
+a{
+  color: setting.$textColor;
+  outline:none;
+	text-decoration:none;
+	transition: .5s;
+  @include fonts.base-font;
+}
+
+main{
+	// IE11対策
+	display: block;
+}
+
+header,
+footer,
+article,
+section,
+aside,
+hgroup,
+nav,
+menu,
+figure,
+figcaption,
+time {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+ol li {
+  list-style: decimal;
+}
+
+img {
+  border: 0;
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+hr {
+  margin: 1em 0;
+  padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+}
+
+input,
+button,
+select {
+  vertical-align: middle;
+  appearance: none;
+  border: none;
+  color: setting.$textColor;
+  @include fonts.base-font;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  @include fonts.base-font;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
