@@ -115,6 +115,9 @@ gulp.task("watch", () => {
   };
   gulp.watch("**.html", browserReload);
   gulp.watch("ejs/*.ejs", gulp.series("ejs"));
+  gulp.watch("ejs/**/*.ejs", gulp.series("ejs"));
+  gulp.watch("ejs/*.ejs", browserReload);
+  gulp.watch("ejs/**/*.ejs", browserReload);
   gulp.watch("assets/js/*.js", gulp.series("js"));
   gulp.watch("assets/sass/**/*.scss", gulp.series("sass"));
   gulp.watch("assets/sass/**/*.scss", browserReload);

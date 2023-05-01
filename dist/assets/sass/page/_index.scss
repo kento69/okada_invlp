@@ -4,6 +4,335 @@
 @use "../mixin/clearfix";
 @use "../mixin/csshack";
 
-.p-front {
-    
+.l-common {
+    background: #1F1E45;
+}
+
+.p-mv {
+    background: url("ph_sectionbg01.png") center/cover;
+    position: relative;
+    padding: common.calcResp(177) 0 common.calcResp(230) common.calcResp(69);
+    &__img {
+        position: absolute;
+        right: common.calcResp(-80);
+        bottom: 0;
+        width: common.calcResp(750);
+        height: auto;
+    }
+    &__win {
+        position: relative;
+        font-size: common.calcResp(62);
+        font-weight: bold;
+    }
+    h1 {
+        position: relative;
+        font-size: common.calcResp(119);
+    }
+    &__txt {
+        position: relative;
+        margin-bottom: common.calcResp(112);
+        span {
+            font-size: common.calcResp(200);
+            line-height: 1;
+        }
+        font-size: common.calcResp(80);
+    }
+    &__lead {
+        position: relative;
+        font-size: common.calcResp(114);
+        margin-bottom: common.calcResp(40);
+        span {
+            display: block;
+            font-size: common.calcResp(66);
+        }
+    }
+    &__btn {
+        position: relative;
+        width: common.calcResp(562);
+        height: common.calcResp(118);
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            color: #1F1E45;
+            font-weight: bold;
+            font-size: common.calcResp(43);
+        }
+    }
+}
+
+.p-works {
+    background: url("ph_sectionbg02.png") center/cover;
+    padding-top: common.calcResp(157);
+    &__head {
+        font-size: common.calcResp(84);
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: common.calcResp(207);
+    }
+    &__column01 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: common.calcResp(260);
+        .txt {
+            margin-right: common.calcResp(60);
+            font-size: common.calcResp(70);
+            span {
+                font-size: common.calcResp(196);
+                display: block;
+            }
+        }
+        .img {
+            width: common.calcResp(460);
+        }
+    }
+    &__column02 {
+        text-align: center;
+        margin-bottom: common.calcResp(325);
+        .txt {
+            margin-bottom: common.calcResp(130);
+            font-size: common.calcResp(70);
+        }
+        .img {
+            text-align: center;
+            img {
+                width: common.calcResp(952);
+            }
+        }
+    }
+    &__column03 {
+        .txt {
+            margin-right: common.calcResp(60);
+            font-size: common.calcResp(70);
+            padding-left: common.calcResp(106);
+            .num {
+                font-size: common.calcResp(100);
+                span {
+                    font-size: common.calcResp(211);
+                }
+            }
+        }
+        .img {
+            text-align: right;
+            padding-right: common.calcResp(94);
+            img {
+                width: common.calcResp(460);
+            }
+        }
+    }
+}
+
+.p-service {
+    padding: common.calcResp(190) 0 common.calcResp(207);
+    &__reason {
+        text-align: center;
+        margin-bottom: common.calcResp(208);
+        &__txt {
+            font-size: common.calcResp(60);
+            font-weight: bold;
+            margin-bottom: common.calcResp(125);
+        }
+        &__img {
+            img {
+                width: common.calcResp(1029);
+            }
+        }
+    }
+    h2 {
+        text-align: center;
+        font-size: common.calcResp(60);
+        font-weight: bold;
+        margin-bottom: common.calcResp(67);
+    }
+    &__column {
+        position: relative;
+        &:nth-child(3) {
+            margin-bottom: common.calcResp(23);
+            .txt {
+                margin-bottom: common.calcResp(141);
+            }
+            .img {
+                margin-left: common.calcResp(110);
+            }
+            .p-service__img {
+                right: common.calcResp(81);
+                img {
+                    width: common.calcResp(450);
+                }
+            }
+        }
+        &:nth-child(4) {
+            text-align: right;
+            margin-bottom: common.calcResp(64);
+            .p-service__txt {
+                padding-right: common.calcResp(59);
+                display: inline-block;
+                text-align: left;
+                .txt {
+                    margin-bottom: common.calcResp(49);
+                    & + & {
+                        margin-bottom: common.calcResp(75);
+                    }
+                }
+                .img {
+                    margin: 0 auto;
+                }
+            }
+            .p-service__img {
+                left: common.calcResp(109);
+                img {
+                    width: common.calcResp(468);
+                }
+            }
+        }
+        &:nth-child(5) {
+            margin-bottom: common.calcResp(242);
+            .p-service__img {
+                right: common.calcResp(77);
+                img {
+                    width: common.calcResp(468);
+                }
+            }
+        }
+    }
+    &__txt {
+        padding-left: common.calcResp(125);
+        .num {
+            font-size: common.calcResp(111);
+            margin-bottom: common.calcResp(24);
+            line-height: 1;
+        }
+        .head {
+            font-size: common.calcResp(60);
+            margin-bottom: common.calcResp(48);
+            font-weight: bold;
+            line-height: 1;
+        }
+        .txt {
+            font-size: common.calcResp(25);
+            line-height: 1.8;
+            font-weight: bold;
+        }
+        .img {
+            width: common.calcResp(21);
+        }
+
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+    }
+    &__btn {
+        position: relative;
+        width: common.calcResp(562);
+        height: common.calcResp(118);
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: common.calcResp(59);
+        margin: 0 auto;
+        a {
+            color: #1F1E45;
+            font-weight: bold;
+            font-size: common.calcResp(43);
+        }
+    }
+}
+
+.p-movie {
+    padding: common.calcResp(95) 0 common.calcResp(171);
+    &__head {
+        font-size: common.calcResp(60);
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: common.calcResp(80);
+    }
+    &__lead {
+        font-size: common.calcResp(40);
+        line-height: 1.7;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: common.calcResp(87);
+    }
+    .swiper-container {
+        margin-bottom: common.calcResp(209);
+    }
+    &__column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__txt {
+        font-size: common.calcResp(67);
+        font-weight: bold;
+        line-height: 1.7;
+    }
+    &__img {
+        margin-left: common.calcResp(76);
+        img {
+            width: common.calcResp(360);
+            height: auto;
+        }
+    }
+}
+
+.p-voice {
+    padding: common.calcResp(114) 0 common.calcResp(126);
+    &__head {
+        font-size: common.calcResp(60);
+        color: #1F1E45;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: common.calcResp(64);
+    }
+    .swiper-container {
+        margin-bottom: common.calcResp(88);
+    }
+    &__txt {
+        font-size: common.calcResp(45);
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.p-compare {
+    padding: common.calcResp(183) 0 common.calcResp(276);
+    &__head {
+        font-size: common.calcResp(60);
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: common.calcResp(114);
+    }
+    &__img {
+        text-align: center;
+        img {
+            width: common.calcResp(1004);
+        }
+    }
+}
+
+.p-faq {
+    background: #fff;
+    padding: common.calcResp(129) 0 common.calcResp(219);
+
+    &__btn {
+        display: block;
+        position: relative;
+        a {
+            margin: 0 auto;
+            background: #1F1E45;
+            width: common.calcResp(562);
+            height: common.calcResp(118);
+            border-radius: common.calcResp(59);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: common.calcResp(43);
+        }
+    }
 }
