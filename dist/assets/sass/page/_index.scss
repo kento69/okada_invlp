@@ -9,7 +9,7 @@
 }
 
 .p-mv {
-    background: url("ph_sectionbg01.png") center/cover;
+    background: #1B1B29;
     position: relative;
     padding: common.calcResp(177) 0 common.calcResp(230) common.calcResp(69);
     &__img {
@@ -20,17 +20,45 @@
         height: auto;
     }
     &__win {
-        position: relative;
-        font-size: common.calcResp(62);
-        font-weight: bold;
+        text-align: center;
+        margin-bottom: common.calcResp(10);
+        width: common.calcResp(714);
+        p {
+            display: inline-block;
+            position: relative;
+            font-size: common.calcResp(62);
+            font-weight: bold;
+            &::before {
+                content: "";
+                display: inline-block;
+                width: common.calcResp(80);
+                height: 5px;
+                background: #fff;
+                position: absolute;
+                top: calc(50% - 2.5px);
+                left: common.calcResp(-136);
+            }
+            &::after {
+                content: "";
+                display: inline-block;
+                width: common.calcResp(80);
+                height: 5px;
+                background: #fff;
+                position: absolute;
+                top: calc(50% - 2.5px);
+                right: common.calcResp(-136);
+            }
+        }
     }
     h1 {
         position: relative;
         font-size: common.calcResp(119);
+        font-weight: bold;
     }
     &__txt {
         position: relative;
         margin-bottom: common.calcResp(112);
+        font-weight: bold;
         span {
             font-size: common.calcResp(200);
             line-height: 1;
@@ -41,9 +69,11 @@
         position: relative;
         font-size: common.calcResp(114);
         margin-bottom: common.calcResp(40);
+        line-height: 1;
         span {
             display: block;
             font-size: common.calcResp(66);
+            margin-bottom: 10px;
         }
     }
     &__btn {
@@ -63,8 +93,8 @@
 }
 
 .p-works {
-    background: url("ph_sectionbg02.png") center/cover;
-    padding-top: common.calcResp(157);
+    background: #3C3A5A;
+    padding: common.calcResp(157) 0 common.calcResp(269);
     &__head {
         font-size: common.calcResp(84);
         font-weight: bold;
@@ -79,9 +109,12 @@
         .txt {
             margin-right: common.calcResp(60);
             font-size: common.calcResp(70);
+            font-weight: bold;
+            line-height: 1;
             span {
                 font-size: common.calcResp(196);
                 display: block;
+                margin-top: common.calcResp(20);
             }
         }
         .img {
@@ -94,6 +127,7 @@
         .txt {
             margin-bottom: common.calcResp(130);
             font-size: common.calcResp(70);
+            font-weight: bold;
         }
         .img {
             text-align: center;
@@ -107,6 +141,7 @@
             margin-right: common.calcResp(60);
             font-size: common.calcResp(70);
             padding-left: common.calcResp(106);
+            font-weight: bold;
             .num {
                 font-size: common.calcResp(100);
                 span {
@@ -243,6 +278,7 @@
 }
 
 .p-movie {
+    background: #3C3A5A;
     padding: common.calcResp(95) 0 common.calcResp(171);
     &__head {
         font-size: common.calcResp(60);
@@ -259,6 +295,7 @@
     }
     .swiper-container {
         margin-bottom: common.calcResp(209);
+        overflow: hidden;
     }
     &__column {
         display: flex;
@@ -277,10 +314,15 @@
             height: auto;
         }
     }
+    video {
+        width: common.calcResp(556);
+        height: common.calcResp(1001);
+    }
 }
 
 .p-voice {
     padding: common.calcResp(114) 0 common.calcResp(126);
+    background: #fff;
     &__head {
         font-size: common.calcResp(60);
         color: #1F1E45;
@@ -289,15 +331,19 @@
         margin-bottom: common.calcResp(64);
     }
     .swiper-container {
-        margin-bottom: common.calcResp(88);
+        margin-bottom: common.calcResp(24);
+    }
+    .swiper-slide {
+        width: common.calcResp(888);
+        height: common.calcResp(719);
     }
     &__txt {
         font-size: common.calcResp(45);
         font-weight: bold;
+        color: #1F1E45;
         text-align: center;
     }
 }
-
 .p-compare {
     padding: common.calcResp(183) 0 common.calcResp(276);
     &__head {
@@ -317,7 +363,77 @@
 .p-faq {
     background: #fff;
     padding: common.calcResp(129) 0 common.calcResp(219);
+    &__head {
+        font-size: common.calcResp(48);
+        font-weight: bold;
+        text-align: center;
+        color: #1F1E45;
+        margin-bottom: common.calcResp(88);
+    }
+    &__block {
+        max-width: common.calcResp(999);
+        margin: 0 auto;
 
+        &__head {
+            border-radius: 20px;
+            color: #000;
+            background: #fff;
+            box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.16);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            height: auto;
+            font-size: common.calcResp(30);
+            font-weight: bold;
+            padding: common.calcResp(19) common.calcResp(50) common.calcResp(20);
+            span {
+                display: inline-block;
+                color: #3C3A5A;
+                font-size: common.calcResp(49);
+                font-weight: bold;
+                margin-right: common.calcResp(32);
+            }
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                height: 3px;
+                right: common.calcResp(33);
+                width: common.calcResp(49);
+                background: #707070;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                right: common.calcResp(58);
+                height: common.calcResp(49);
+                width: 3px;
+                background: #707070;
+            }
+        }
+        &__body {
+            position: relative;
+            padding: common.calcResp(86) common.calcResp(136) common.calcResp(92) common.calcResp(137);
+            span {
+                display: inline-block;
+                position: absolute;
+                left: common.calcResp(54);
+                top: common.calcResp(49);
+                color: #3C3A5A;
+                font-size: common.calcResp(49);
+                font-weight: bold;
+            }
+            p {
+                font-size: common.calcResp(25);
+                color: #000;
+                & + p {
+                    margin-top: common.calcResp(72);
+                }
+            }
+        }
+    }
     &__btn {
         display: block;
         position: relative;
