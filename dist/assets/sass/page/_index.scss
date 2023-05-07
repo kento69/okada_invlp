@@ -6,15 +6,23 @@
 
 .l-common {
     background: #1F1E45;
+    .swiper-pagination-bullet {
+        background: #707070;
+        border: #000;
+        width: common.calcResp(16);
+        height: common.calcResp(16);
+        margin: 0 common.calcResp(20);
+    }
 }
 
 .p-mv {
     background: #1B1B29;
     position: relative;
     padding: common.calcResp(177) 0 common.calcResp(230) common.calcResp(69);
+    overflow: hidden;
     &__img {
         position: absolute;
-        right: common.calcResp(-80);
+        right: common.calcResp(-170);
         bottom: 0;
         width: common.calcResp(750);
         height: auto;
@@ -280,6 +288,7 @@
 .p-movie {
     background: #3C3A5A;
     padding: common.calcResp(95) 0 common.calcResp(171);
+    overflow: hidden;
     &__head {
         font-size: common.calcResp(60);
         font-weight: bold;
@@ -295,7 +304,9 @@
     }
     .swiper-container {
         margin-bottom: common.calcResp(209);
-        overflow: hidden;
+    }
+    .swiper-pagination-bullets {
+        bottom: common.calcResp(-40);
     }
     &__column {
         display: flex;
@@ -323,6 +334,7 @@
 .p-voice {
     padding: common.calcResp(114) 0 common.calcResp(126);
     background: #fff;
+    overflow: hidden;
     &__head {
         font-size: common.calcResp(60);
         color: #1F1E45;
@@ -362,7 +374,7 @@
 
 .p-faq {
     background: #fff;
-    padding: common.calcResp(129) 0 common.calcResp(219);
+    padding: common.calcResp(129) 0 common.calcResp(600);
     &__head {
         font-size: common.calcResp(48);
         font-weight: bold;
@@ -373,6 +385,9 @@
     &__block {
         max-width: common.calcResp(999);
         margin: 0 auto;
+        & + & {
+            margin-top: common.calcResp(92);
+        }
 
         &__head {
             border-radius: 20px;
@@ -407,15 +422,23 @@
             &::after {
                 content: "";
                 position: absolute;
-                right: common.calcResp(58);
+                top: 50%;
+                right: common.calcResp(55);
                 height: common.calcResp(49);
+                transform: translateY(-50%);
                 width: 3px;
                 background: #707070;
+                transition: .4s;
+            }
+            &.-active {
+                &::after {
+                    transform: translateY(-50%) rotate(90deg);
+                }
             }
         }
         &__body {
             position: relative;
-            padding: common.calcResp(86) common.calcResp(136) common.calcResp(92) common.calcResp(137);
+            padding: common.calcResp(86) common.calcResp(136) 0 common.calcResp(137);
             span {
                 display: inline-block;
                 position: absolute;
@@ -437,6 +460,7 @@
     &__btn {
         display: block;
         position: relative;
+        margin-top: common.calcResp(162);
         a {
             margin: 0 auto;
             background: #1F1E45;
