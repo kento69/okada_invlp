@@ -103,6 +103,7 @@
 .p-works {
     background: #3C3A5A;
     padding: common.calcResp(157) 0 common.calcResp(269);
+    overflow: hidden;
     &__head {
         font-size: common.calcResp(84);
         font-weight: bold;
@@ -169,6 +170,7 @@
 
 .p-service {
     padding: common.calcResp(190) 0 common.calcResp(207);
+    overflow: hidden;
     &__reason {
         text-align: center;
         margin-bottom: common.calcResp(208);
